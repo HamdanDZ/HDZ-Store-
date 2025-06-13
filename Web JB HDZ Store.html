@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDZ Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/107/107831.png">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+      color: white;
+    }.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-text {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: rgb-glow 4s infinite;
+  color: white;
+}
+
+.progress-bar {
+  margin-top: 20px;
+}
+
+.progress-bar-text {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.pixel-loader {
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid white;
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+}
+
+.pixel-loader div {
+  width: 10px;
+  height: 100%;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+@keyframes rgb-glow {
+  0% { color: red; }
+  25% { color: lime; }
+  50% { color: cyan; }
+  75% { color: yellow; }
+  100% { color: red; }
+}
+
+.content {
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: rgb-glow 5s infinite;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+  filter: sepia(1) hue-rotate(15deg) saturate(5) brightness(1.2);
+}
+
+.sub-header {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: rgb-glow 5s infinite;
+}
+
+.product-buttons, .extra-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.product-buttons a, .extra-buttons a {
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  border: 3px solid;
+  border-image: linear-gradient(45deg, red, lime, cyan, yellow, red) 1;
+  border-radius: 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,255,255,0.5);
+}
+
+.product-buttons a:hover, .extra-buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+.extra-label {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 40px 0 10px;
+  color: #fff;
+  animation: rgb-glow 4s infinite;
+}
+
+.money-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.money {
+  position: absolute;
+  top: -2rem;
+  font-size: 1.5rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-text">HDZ store</div>
+    <div class="progress-bar">
+      <div class="progress-bar-text">LOADING... 0%</div>
+      <div class="pixel-loader">
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>  <div class="content">
+    <div class="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Store Icon">
+      HDZ Store
+    </div>
+    <div class="sub-header">🌐 DIGITAL SERVICE 🌐</div>
+    <div class="product-buttons">
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Tiktok</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik YouTube</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik IG</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Facebook</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Discord Member</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Snack Video</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Telegram</a>
+      <a href="https://wa.me/6282115426229">🎯 Jasa Suntik Channel WA</a>
+      <a href="https://wa.me/6282115426229">🔥 Jasa Mursun</a>
+      <a href="https://wa.me/6282115426229">🔥 Mursun Premium (Private)</a>
+      <a href="https://wa.me/6282115426229">💻 Jasa Pembuatan Website Murah</a>
+      <a href="https://wa.me/6282115426229">🤖 Panel Bot WhatsApp</a>
+      <a href="https://wa.me/6282115426229">🤖 Sewa Bot Basic</a>
+      <a href="https://wa.me/6282115426229">🤖 Sewa Bot Premium</a>
+      <a href="https://wa.me/6282115426229">🎮 MCPE ORI (Backup)</a>
+      <a href="https://wa.me/6282115426229">🎮 Hosting MCPE Basic</a>
+      <a href="https://wa.me/6282115426229">💥 MurBug</a>
+    </div><div class="extra-label">Lainnya?</div>
+<div class="extra-buttons">
+  <a href="https://wa.me/6282115426229?text=saya%20ingin%20memberi%20feedback">📩 Feedback</a>
+  <a href="https://wa.me/6282115426229?text=saya%20ingin%20testimoni%20dan%20informasi%20nya">📢 Testimoni dan Informasi</a>
+  <a href="https://wa.me/6282115426229?text=Saya%20ingin%20input%20Reedem%20code">🎁 Redeem Code</a>
+</div>
+
+  </div>  <div class="money-rain" id="moneyRain"></div>  <script>
+    let progress = 0;
+    const progressText = document.querySelector(".progress-bar-text");
+    const loaderBlocks = document.querySelectorAll(".pixel-loader div");
+
+    const loadingInterval = setInterval(() => {
+      progress += 4;
+      if (progress > 100) progress = 100;
+
+      progressText.textContent = `LOADING... ${progress}%`;
+
+      const blocksToShow = Math.floor((loaderBlocks.length * progress) / 100);
+      loaderBlocks.forEach((block, i) => {
+        block.style.background = i < blocksToShow ? "white" : "transparent";
+      });
+
+      if (progress === 100) {
+        clearInterval(loadingInterval);
+        setTimeout(() => {
+          document.getElementById("loadingScreen").style.display = "none";
+        }, 500);
+      }
+    }, 150);
+
+    const emojiList = ['💸','💵'];
+    const moneyContainer = document.getElementById('moneyRain');
+
+    function createMoney() {
+      if (document.hidden) return;
+      const money = document.createElement('div');
+      money.classList.add('money');
+      money.style.left = Math.random() * 100 + 'vw';
+      money.style.animationDuration = (2 + Math.random() * 3) + 's';
+      money.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+      moneyContainer.appendChild(money);
+
+      setTimeout(() => {
+        money.remove();
+      }, 5000);
+    }
+
+    setInterval(createMoney, 700);
+  </script></body>
+</html>
